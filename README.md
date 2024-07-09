@@ -1,10 +1,8 @@
 # UAS_PemrogramanMobile2
 
-# UAS-PEMOGRAMAN-MOBILE-2
+#### NAMA           : Tyanshi Firli Maharani
 
-#### NAMA           : ZULAEHA
-
-#### NIM            : 312210575
+#### NIM            : 312210581
 
 #### KELAS          : TI.22.A5
 
