@@ -1,12 +1,10 @@
 # UAS_PemrogramanMobile2
 
-#### NAMA           : Tyanshi Firli Maharani
+#### Nama : Tyanshi Firli Maharani
 
-#### NIM            : 312210581
+#### NIM : 312210581
 
-#### KELAS          : TI.22.A5
-
-#### DOSEN PENGAMPU : EKO BUDIARTO, S.KOM., M.M
+#### Kelas : TI.22.A5
 
 # Daftar Isi
 
@@ -18,9 +16,8 @@
 6. Presentasi via Youtube 
 
 # PROJECT FLUTTER [Aplikasi Note]
-
 > main.dart
-
+```
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sqlite_flutter_crud/Authtentication/login.dart';
@@ -33,7 +30,7 @@ void main() {
     systemNavigationBarDividerColor: Colors.transparent,
     systemNavigationBarIconBrightness: Brightness.dark,
     statusBarIconBrightness: Brightness.dark,
- ));
+  ));
   runApp(const MyApp());
 }
 
@@ -55,8 +52,10 @@ class MyApp extends StatelessWidget {
   }
 }
 
-> login.dart
+```
 
+> login.dart
+```
 import 'package:flutter/material.dart';
 import 'package:sqlite_flutter_crud/Authtentication/signup.dart';
 import 'package:sqlite_flutter_crud/JsonModels/users.dart';
@@ -82,6 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   //Here is our bool variable
   bool isLoginTrue = false;
+
   final db = DatabaseHelper();
 
   //Now we should call this function in login button
@@ -105,7 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
-  return Scaffold(
+    return Scaffold(
       body: Center(
         child: SingleChildScrollView(
           child: Padding(
@@ -115,7 +115,7 @@ class _LoginScreenState extends State<LoginScreen> {
               key: formKey,
               child: Column(
                 children: [
-               //Username field
+                  //Username field
 
                   //Before we show the image, after we copied the image we need to define the location in pubspec.yaml
                   Image.asset(
@@ -143,7 +143,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         border: InputBorder.none,
                         hintText: "Username",
                       ),
-               ),
+                    ),
                   ),
 
                   //Password field
@@ -161,7 +161,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           return "password belum di isi";
                         }
                         return null;
-                    },
+                      },
                       obscureText: !isVisible,
                       decoration: InputDecoration(
                           icon: const Icon(Icons.lock),
@@ -189,7 +189,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                         color: Colors.deepPurple),
-               child: TextButton(
+                    child: TextButton(
                         onPressed: () {
                           if (formKey.currentState!.validate()) {
                             //Login method will be here
@@ -219,7 +219,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     builder: (context) => const SignUp()));
                           },
                           child: const Text("SIGN UP"))
-         ],
+                    ],
                   ),
 
                   // We will disable this message in default, when user and pass is incorrect we will trigger this message to user
@@ -239,10 +239,10 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 }
 
-
+```
 
 > signup.dart
-
+```
 import 'package:flutter/material.dart';
 import 'package:sqlite_flutter_crud/Authtentication/login.dart';
 import 'package:sqlite_flutter_crud/JsonModels/users.dart';
@@ -270,7 +270,7 @@ class _SignUpState extends State<SignUp> {
       //SingleChildScrollView to have an scrol in the screen
       body: Center(
         child: SingleChildScrollView(
-        child: Form(
+          child: Form(
             key: formKey,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
@@ -297,7 +297,7 @@ class _SignUpState extends State<SignUp> {
                         borderRadius: BorderRadius.circular(8),
                         color: Colors.deepPurple.withOpacity(.2)),
                     child: TextFormField(
-         controller: username,
+                      controller: username,
                       validator: (value) {
                         if (value!.isEmpty) {
                           return "username belum di isi";
@@ -327,7 +327,7 @@ class _SignUpState extends State<SignUp> {
                           return "password belum di isi";
                         }
                         return null;
-         },
+                      },
                       obscureText: !isVisible,
                       decoration: InputDecoration(
                           icon: const Icon(Icons.lock),
@@ -354,7 +354,7 @@ class _SignUpState extends State<SignUp> {
                     padding:
                         const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                     decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(8),
+                        borderRadius: BorderRadius.circular(8),
                         color: Colors.deepPurple.withOpacity(.2)),
                     child: TextFormField(
                       controller: confirmPassword,
@@ -383,7 +383,7 @@ class _SignUpState extends State<SignUp> {
                                   ? Icons.visibility
                                   : Icons.visibility_off))),
                     ),
-       ),
+                  ),
 
                   const SizedBox(height: 10),
                   //Login button
@@ -404,7 +404,7 @@ class _SignUpState extends State<SignUp> {
                                     usrName: username.text,
                                     usrPassword: password.text))
                                 .whenComplete(() {
-                                 //After success user creation go to login screen
+                              //After success user creation go to login screen
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
@@ -422,7 +422,7 @@ class _SignUpState extends State<SignUp> {
                   //Sign up button
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-    children: [
+                    children: [
                       const Text("Sudah memiliki akun?"),
                       TextButton(
                           onPressed: () {
@@ -445,26 +445,42 @@ class _SignUpState extends State<SignUp> {
   }
 }
 
-
+```
 
 ### Kumpulan file yang di buat untuk Program Aplikasi Note
+> Kumpulan file yang dibuat untuk Aplikasi Note ini dapat dilihat di sisi kiri. Untuk file-filenya, yaitu `login.dart`, `signup.dart`, `note_model.dart`, `users.dart`, `sqlite.dart`, `create_note.dart`, `notes.dart` dan `main.dart`. File-file ini tedapat pada folder `../lib/..` yang kemudian di kelompokkan lagi ke dalam folder baru secara terpisah
 
 ![Screenshot 2024-07-09 113820](https://github.com/VivieZuliani/UAS_4_PemrogramanMobile2/assets/130271255/d497e9d7-fc91-4ec1-ae57-198aab80a605)
 
 
 ### Outputnya :
 
-![picture01](https://github.com/zulaeha168/UAS-PEMOGRAMAN-MOBILE-2/assets/130324650/cae2c57e-3a8c-4c52-bec7-64b43cab6495)
+![Screenshot 2024-07-09 111956](https://github.com/VivieZuliani/UAS_4_PemrogramanMobile2/assets/130271255/b266a692-b469-437e-9f90-35ad9a161267)
 
+> Untuk menambahkan note baru, klik tombol `+` pada bagian kanan bawah, nantinya pengguna akan di arahkan ke halaman pembuatan note baru
 
-![picture02](https://github.com/zulaeha168/UAS-PEMOGRAMAN-MOBILE-2/assets/130324650/f2800bd6-2084-42a9-8113-51d9542c348d)
+> Untuk pembaruan note, bisa dilakukan dengan `mengklik note yang sudah di buat`, nantinya pengguna bisa langsung memperbarui isi maupun judul note tersebut
 
+![Screenshot 2024-07-09 112016](https://github.com/VivieZuliani/UAS_4_PemrogramanMobile2/assets/130271255/97de8be2-cecb-4fb5-888c-0a8124f1210b)
 
-![picture03](https://github.com/zulaeha168/UAS-PEMOGRAMAN-MOBILE-2/assets/130324650/1c7f0603-9fbf-4a3e-9c66-d29712a3c50c)
+> Halaman pencarian atau `search`, yaitu bagian untuk mencari jenis note yang di butuhkan jika pengguna membuat banyak note. Search ini memudahkan pengguna agar tidak mencari satu per satu note yang di butuhkan
+
+![Screenshot 2024-07-09 112034](https://github.com/VivieZuliani/UAS_4_PemrogramanMobile2/assets/130271255/543f7518-55f0-4062-9757-56f2be8b7cda)
 
 
 ### Presentasi via Youtube 
 
 https://youtu.be/Z4wlUMUB6zE
 
-# Terima Kasih
+
+
+#### Terima Kasih
+
+
+
+
+
+
+
+
+
