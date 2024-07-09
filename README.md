@@ -6,6 +6,8 @@
 
 #### Kelas : TI.22.A5
 
+#### DOSEN PENGAMPU : EKO BUDIARTO, S.KOM., M.M
+
 # Daftar Isi
 
 1. Code untuk main.dart
